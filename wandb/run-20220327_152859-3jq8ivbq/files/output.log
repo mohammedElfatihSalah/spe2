@@ -1,0 +1,52 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+I0327 15:29:04.705094 140690920597376 run.py:180] Using CLRS21 spec: {'train': {'num_samples': 1000, 'length': 16, 'seed': 11}, 'val': {'num_samples': 32, 'length': 64, 'seed': 21}, 'test': {'num_samples': 32, 'length': 64, 'seed': 31}}
+I0327 15:29:08.097210 140690920597376 xla_bridge.py:253] Unable to initialize backend 'tpu_driver': NOT_FOUND: Unable to find driver in registry given worker:
+manual >>  True
+I0327 15:29:08.243183 140690920597376 xla_bridge.py:253] Unable to initialize backend 'tpu': INVALID_ARGUMENT: TpuPlatform is not available.
+2022-03-27 15:29:11.612140: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/gemm_algorithm_picker.cc:212] Failed to find best cuBLAS algorithm, GEMM performance might be suboptimal: INTERNAL: All algorithms tried for %cublas-gemm.1 = f32[640,32]{1,0} custom-call(f32[640,4]{1,0} %bitcast, f32[4,32]{1,0} %Arg_1.2), custom_call_target="__cublas$gemm", backend_config="{\"alpha_real\":1,\"alpha_imag\":0,\"beta\":0,\"dot_dimension_numbers\":{\"lhs_contracting_dimensions\":[\"1\"],\"rhs_contracting_dimensions\":[\"0\"],\"lhs_batch_dimensions\":[],\"rhs_batch_dimensions\":[]},\"batch_size\":\"1\",\"lhs_stride\":\"2560\",\"rhs_stride\":\"128\"}" failed. Falling back to default algorithm.  Per-algorithm errors:
+adj shape >>  (32, 20, 20)
+2022-03-27 15:29:12.885222: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/gemm_algorithm_picker.cc:212] Failed to find best cuBLAS algorithm, GEMM performance might be suboptimal: INTERNAL: All algorithms tried for %cublas-gemm.1 = f32[640,32]{1,0} custom-call(f32[640,64]{1,0} %bitcast, f32[64,32]{1,0} %Arg_1.2), custom_call_target="__cublas$gemm", backend_config="{\"alpha_real\":1,\"alpha_imag\":0,\"beta\":0,\"dot_dimension_numbers\":{\"lhs_contracting_dimensions\":[\"1\"],\"rhs_contracting_dimensions\":[\"0\"],\"lhs_batch_dimensions\":[],\"rhs_batch_dimensions\":[]},\"batch_size\":\"1\",\"lhs_stride\":\"40960\",\"rhs_stride\":\"2048\"}" failed. Falling back to default algorithm.  Per-algorithm errors:
+2022-03-27 15:29:13.899880: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/gemm_algorithm_picker.cc:212] Failed to find best cuBLAS algorithm, GEMM performance might be suboptimal: INTERNAL: All algorithms tried for %cublas-gemm.1 = f32[640,32]{1,0} custom-call(f32[640,32]{1,0} %bitcast, f32[32,32]{1,0} %Arg_1.2), custom_call_target="__cublas$gemm", backend_config="{\"alpha_real\":1,\"alpha_imag\":0,\"beta\":0,\"dot_dimension_numbers\":{\"lhs_contracting_dimensions\":[\"1\"],\"rhs_contracting_dimensions\":[\"0\"],\"lhs_batch_dimensions\":[],\"rhs_batch_dimensions\":[]},\"batch_size\":\"1\",\"lhs_stride\":\"20480\",\"rhs_stride\":\"1024\"}" failed. Falling back to default algorithm.  Per-algorithm errors:
+2022-03-27 15:29:14.163482: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/gemm_algorithm_picker.cc:212] Failed to find best cuBLAS algorithm, GEMM performance might be suboptimal: INTERNAL: All algorithms tried for %cublas-gemm.1 = f32[640,64]{1,0} custom-call(f32[640,32]{1,0} %bitcast, f32[32,64]{1,0} %Arg_1.2), custom_call_target="__cublas$gemm", backend_config="{\"alpha_real\":1,\"alpha_imag\":0,\"beta\":0,\"dot_dimension_numbers\":{\"lhs_contracting_dimensions\":[\"1\"],\"rhs_contracting_dimensions\":[\"0\"],\"lhs_batch_dimensions\":[],\"rhs_batch_dimensions\":[]},\"batch_size\":\"1\",\"lhs_stride\":\"20480\",\"rhs_stride\":\"2048\"}" failed. Falling back to default algorithm.  Per-algorithm errors:
+2022-03-27 15:29:14.699262: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/gemm_algorithm_picker.cc:212] Failed to find best cuBLAS algorithm, GEMM performance might be suboptimal: INTERNAL: All algorithms tried for %cublas-gemm.1 = f32[640,64]{1,0} custom-call(f32[640,64]{1,0} %bitcast, f32[64,64]{1,0} %Arg_1.2), custom_call_target="__cublas$gemm", backend_config="{\"alpha_real\":1,\"alpha_imag\":0,\"beta\":0,\"dot_dimension_numbers\":{\"lhs_contracting_dimensions\":[\"1\"],\"rhs_contracting_dimensions\":[\"0\"],\"lhs_batch_dimensions\":[],\"rhs_batch_dimensions\":[]},\"batch_size\":\"1\",\"lhs_stride\":\"40960\",\"rhs_stride\":\"4096\"}" failed. Falling back to default algorithm.  Per-algorithm errors:
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/content/drive/MyDrive/Final Project/new_clrs/clrs/examples/run.py", line 411, in <module>
+    app.run(main)
+  File "/usr/local/lib/python3.7/dist-packages/absl/app.py", line 312, in run
+    _run_main(main, args)
+  File "/usr/local/lib/python3.7/dist-packages/absl/app.py", line 258, in _run_main
+    sys.exit(main(argv))
+  File "/content/drive/MyDrive/Final Project/new_clrs/clrs/examples/run.py", line 255, in main
+    model.init(feedback.features, FLAGS.seed)
+  File "/content/drive/MyDrive/Final Project/new_clrs/clrs/_src/baselines_2.py", line 963, in init
+    self.params = self.net_fn.init(jax.random.PRNGKey(seed), features, True, True)
+  File "/usr/local/lib/python3.7/dist-packages/haiku/_src/transform.py", line 113, in init_fn
+    params, state = f.init(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/haiku/_src/transform.py", line 381, in init_fn
+    f(*args, **kwargs)
+  File "/content/drive/MyDrive/Final Project/new_clrs/clrs/_src/baselines_2.py", line 955, in _use_net
+    kind, inf_bias, inf_bias_edge, self.nb_dims, pooling=self.pooling)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/haiku/_src/module.py", line 433, in wrapped
+    out = f(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/haiku/_src/module.py", line 284, in run_interceptors
+    return bound_method(*args, **kwargs)
+  File "/content/drive/MyDrive/Final Project/new_clrs/clrs/_src/baselines_2.py", line 362, in __call__
+    pooling=self.pooling)
+  File "/usr/local/lib/python3.7/dist-packages/haiku/_src/module.py", line 433, in wrapped
+    out = f(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/haiku/_src/module.py", line 284, in run_interceptors
+    return bound_method(*args, **kwargs)
+  File "/content/drive/MyDrive/Final Project/new_clrs/clrs/_src/baselines_2.py", line 272, in _msg_passing_step
+    inputs, cur_hint, mp_state.hiddens, nb_nodes, pooling=pooling, prev_hint=prev_hint_)
+  File "/usr/local/lib/python3.7/dist-packages/haiku/_src/module.py", line 433, in wrapped
+    out = f(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/haiku/_src/module.py", line 284, in run_interceptors
+    return bound_method(*args, **kwargs)
+  File "/content/drive/MyDrive/Final Project/new_clrs/clrs/_src/baselines_2.py", line 802, in _one_step_pred
+    gr_emb = self.lstm_graph_pool(hint.name, self.lstms, h_t, 3)
+AttributeError: 'Net2' object has no attribute 'lstms'
+inside lstm line: [724] baseline_2.py

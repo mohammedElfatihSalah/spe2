@@ -1,0 +1,19 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+I0207 11:37:35.745030 139675692758912 run.py:116] Using CLRS21 spec: {'train': {'num_samples': 1000, 'length': 16, 'seed': 11}, 'val': {'num_samples': 32, 'length': 16, 'seed': 21}, 'test': {'num_samples': 32, 'length': 64, 'seed': 31}}
+I0207 11:37:44.527436 139675692758912 utils.py:159] NumExpr defaulting to 2 threads.
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/content/drive/MyDrive/Final Project/new_clrs/clrs/examples/run.py", line 343, in <module>
+    app.run(main)
+  File "/usr/local/lib/python3.7/dist-packages/absl/app.py", line 312, in run
+    _run_main(main, args)
+  File "/usr/local/lib/python3.7/dist-packages/absl/app.py", line 258, in _run_main
+    sys.exit(main(argv))
+  File "/content/drive/MyDrive/Final Project/new_clrs/clrs/examples/run.py", line 141, in main
+    wandb.watch(model, log='all')
+  File "/usr/local/lib/python3.7/dist-packages/wandb/sdk/wandb_watch.py", line 74, in watch
+    + str(type(model))
+ValueError: Expected a pytorch model (torch.nn.Module). Received <class 'clrs._src.baselines_2.BaselineModel2'>

@@ -1,0 +1,24 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+I0214 14:01:38.689906 140647355766656 run.py:180] Using CLRS21 spec: {'train': {'num_samples': 1000, 'length': 16, 'seed': 11}, 'val': {'num_samples': 32, 'length': 16, 'seed': 21}, 'test': {'num_samples': 32, 'length': 64, 'seed': 31}}
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/content/drive/MyDrive/Final Project/new_clrs/clrs/examples/run.py", line 411, in <module>
+    app.run(main)
+  File "/usr/local/lib/python3.7/dist-packages/absl/app.py", line 312, in run
+    _run_main(main, args)
+  File "/usr/local/lib/python3.7/dist-packages/absl/app.py", line 258, in _run_main
+    sys.exit(main(argv))
+  File "/content/drive/MyDrive/Final Project/new_clrs/clrs/examples/run.py", line 200, in main
+    dummy_trajectory=train_sampler.next(FLAGS.batch_size),
+  File "/content/drive/MyDrive/Final Project/new_clrs/clrs/_src/baselines_2.py", line 957, in __init__
+    self.net_fn = hk.without_apply_rng(hk.transform(_use_net))
+  File "/usr/local/lib/python3.7/dist-packages/haiku/_src/transform.py", line 303, in transform
+    return without_state(transform_with_state(f))
+  File "/usr/local/lib/python3.7/dist-packages/haiku/_src/transform.py", line 361, in transform_with_state
+    check_not_jax_transformed(f)
+  File "/usr/local/lib/python3.7/dist-packages/haiku/_src/transform.py", line 308, in check_not_jax_transformed
+    if isinstance(f, (jax.xla.xe.CompiledFunction, jax.xla.xe.PmapFunction)):  # pytype: disable=name-error
+AttributeError: module 'jaxlib.xla_extension' has no attribute 'PmapFunction'

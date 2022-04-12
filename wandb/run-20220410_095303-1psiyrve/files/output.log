@@ -1,0 +1,110 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+I0410 09:53:12.013947 140243049744256 run.py:180] Using CLRS21 spec: {'train': {'num_samples': 1000, 'length': 16, 'seed': 11}, 'val': {'num_samples': 32, 'length': 16, 'seed': 21}, 'test': {'num_samples': 32, 'length': 64, 'seed': 31}}
+manual >>  True
+I0410 09:53:14.346095 140243049744256 xla_bridge.py:253] Unable to initialize backend 'tpu_driver': NOT_FOUND: Unable to find driver in registry given worker:
+2022-04-10 09:53:14.461174: E external/org_tensorflow/tensorflow/stream_executor/cuda/cuda_driver.cc:271] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+I0410 09:53:14.461541 140243049744256 xla_bridge.py:253] Unable to initialize backend 'gpu': FAILED_PRECONDITION: No visible GPU devices.
+I0410 09:53:14.462035 140243049744256 xla_bridge.py:253] Unable to initialize backend 'tpu': INVALID_ARGUMENT: TpuPlatform is not available.
+W0410 09:53:14.462209 140243049744256 xla_bridge.py:257] No GPU/TPU found, falling back to CPU. (Set TF_CPP_MIN_LOG_LEVEL=0 and rerun for more info.)
+adj shape >>  (32, 20, 20)
+manual >>  True
+adj shape >>  (32, 20, 20)
+manual >>  True
+adj shape >>  (32, 20, 20)
+manual >>  True
+adj shape >>  (32, 20, 20)
+manual >>  True
+adj shape >>  (32, 20, 20)
+I0410 09:53:41.956618 140243049744256 run.py:261] Compiled feedback step in 27.624493 s.
+manual >>  True
+adj shape >>  (32, 20, 20)
+manual >>  True
+adj shape >>  (32, 20, 20)
+I0410 09:53:48.155125 140243049744256 run.py:276] (train) step 0: {'average_accuracy': 0.499046081654199, 'average_shift': 5.3125}
+manual >>  True
+adj shape >>  (32, 20, 20)
+manual >>  True
+adj shape >>  (32, 20, 20)
+I0410 09:53:53.295998 140243049744256 run.py:283] (val) step 0: {'average_accuracy': 0.47731508942446443, 'average_shift': 4.5}
+I0410 09:53:53.296575 140243049744256 run.py:329] Saving new checkpoint for average accuracy...
+I0410 09:53:53.299443 140243049744256 run.py:334] Saving new checkpoint for average shift...
+I0410 09:54:06.160895 140243049744256 run.py:276] (train) step 10: {'average_accuracy': 0.5332807715160656, 'average_shift': 4.3125}
+I0410 09:54:06.764391 140243049744256 run.py:283] (val) step 10: {'average_accuracy': 0.5906223117160616, 'average_shift': 3.8125}
+I0410 09:54:06.765164 140243049744256 run.py:329] Saving new checkpoint for average accuracy...
+I0410 09:54:06.771159 140243049744256 run.py:334] Saving new checkpoint for average shift...
+I0410 09:54:20.254565 140243049744256 run.py:276] (train) step 20: {'average_accuracy': 0.5605579887035478, 'average_shift': 4.6875}
+I0410 09:54:20.777382 140243049744256 run.py:283] (val) step 20: {'average_accuracy': 0.5821495344932843, 'average_shift': 3.71875}
+I0410 09:54:20.777758 140243049744256 run.py:334] Saving new checkpoint for average shift...
+I0410 09:54:33.769609 140243049744256 run.py:276] (train) step 30: {'average_accuracy': 0.5386310278773515, 'average_shift': 4.59375}
+I0410 09:54:34.310878 140243049744256 run.py:283] (val) step 30: {'average_accuracy': 0.5889462967587967, 'average_shift': 4.0625}
+I0410 09:54:34.311143 140243049744256 run.py:329] Saving new checkpoint for average accuracy...
+I0410 09:54:47.453672 140243049744256 run.py:276] (train) step 40: {'average_accuracy': 0.5319173448079698, 'average_shift': 3.53125}
+I0410 09:54:48.134502 140243049744256 run.py:283] (val) step 40: {'average_accuracy': 0.5639214951714951, 'average_shift': 3.46875}
+I0410 09:54:48.135134 140243049744256 run.py:329] Saving new checkpoint for average accuracy...
+I0410 09:54:48.138228 140243049744256 run.py:334] Saving new checkpoint for average shift...
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/linecache.py", line 47, in getlines
+    return updatecache(filename, module_globals)
+  File "/usr/lib/python3.7/linecache.py", line 136, in updatecache
+    with tokenize.open(fullname) as fp:
+  File "/usr/lib/python3.7/tokenize.py", line 447, in open
+    buffer = _builtin_open(filename, 'rb')
+KeyboardInterrupt
+Original exception was:
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/content/drive/MyDrive/Final Project/new_clrs/clrs/examples/run.py", line 411, in <module>
+    app.run(main)
+  File "/usr/local/lib/python3.7/dist-packages/absl/app.py", line 312, in run
+    _run_main(main, args)
+  File "/usr/local/lib/python3.7/dist-packages/absl/app.py", line 258, in _run_main
+    sys.exit(main(argv))
+  File "/content/drive/MyDrive/Final Project/new_clrs/clrs/examples/run.py", line 258, in main
+    cur_loss = model.feedback(feedback)
+  File "/content/drive/MyDrive/Final Project/new_clrs/clrs/_src/baselines_2.py", line 970, in feedback
+    feedback)
+  File "/content/drive/MyDrive/Final Project/new_clrs/clrs/_src/baselines_2.py", line 1141, in update
+    lss, grads = jax.value_and_grad(loss)(params, feedback)
+  File "/usr/local/lib/python3.7/dist-packages/jax/_src/traceback_util.py", line 162, in reraise_with_filtered_traceback
+    return fun(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/jax/_src/api.py", line 952, in value_and_grad_f
+    ans, vjp_py = _vjp(f_partial, *dyn_args, reduce_axes=reduce_axes)
+  File "/usr/local/lib/python3.7/dist-packages/jax/_src/api.py", line 2409, in _vjp
+    flat_fun, primals_flat, reduce_axes=reduce_axes)
+  File "/usr/local/lib/python3.7/dist-packages/jax/interpreters/ad.py", line 119, in vjp
+    out_primals, pvals, jaxpr, consts = linearize(traceable, *primals)
+  File "/usr/local/lib/python3.7/dist-packages/jax/interpreters/ad.py", line 106, in linearize
+    jaxpr, out_pvals, consts = pe.trace_to_jaxpr(jvpfun_flat, in_pvals)
+  File "/usr/local/lib/python3.7/dist-packages/jax/_src/profiler.py", line 206, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/jax/interpreters/partial_eval.py", line 592, in trace_to_jaxpr
+    jaxpr, (out_pvals, consts, env) = fun.call_wrapped(pvals)
+  File "/usr/local/lib/python3.7/dist-packages/jax/linear_util.py", line 166, in call_wrapped
+    ans = self.f(*args, **dict(self.params, **kwargs))
+  File "/content/drive/MyDrive/Final Project/new_clrs/clrs/_src/baselines_2.py", line 1060, in loss
+    jnp.maximum(pred, 0) - pred * truth.data[i] +
+  File "/usr/local/lib/python3.7/dist-packages/jax/_src/traceback_util.py", line 162, in reraise_with_filtered_traceback
+    return fun(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/jax/_src/api.py", line 435, in cache_miss
+    donated_invars=donated_invars, inline=inline)
+  File "/usr/local/lib/python3.7/dist-packages/jax/core.py", line 1709, in bind
+    return call_bind(self, fun, *args, **params)
+  File "/usr/local/lib/python3.7/dist-packages/jax/core.py", line 1721, in call_bind
+    outs = top_trace.process_call(primitive, fun, tracers, params)
+  File "/usr/local/lib/python3.7/dist-packages/jax/interpreters/ad.py", line 331, in process_call
+    result = call_primitive.bind(f_jvp, *primals, *nonzero_tangents, **new_params)
+  File "/usr/local/lib/python3.7/dist-packages/jax/core.py", line 1709, in bind
+    return call_bind(self, fun, *args, **params)
+  File "/usr/local/lib/python3.7/dist-packages/jax/core.py", line 1721, in call_bind
+    outs = top_trace.process_call(primitive, fun, tracers, params)
+  File "/usr/local/lib/python3.7/dist-packages/jax/interpreters/partial_eval.py", line 223, in process_call
+    name_stack = self._current_truncated_name_stack()
+  File "/usr/local/lib/python3.7/dist-packages/jax/interpreters/partial_eval.py", line 369, in _current_truncated_name_stack
+    return source_info_util.current_name_stack()[len(self.name_stack):]
+  File "/usr/local/lib/python3.7/dist-packages/jax/_src/source_info_util.py", line 193, in current_name_stack
+    return _source_info_context.context.name_stack
+KeyboardInterrupt

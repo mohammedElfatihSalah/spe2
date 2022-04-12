@@ -1,0 +1,125 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+I0410 11:09:19.509626 139992167606144 run.py:180] Using CLRS21 spec: {'train': {'num_samples': 1000, 'length': 16, 'seed': 11}, 'val': {'num_samples': 32, 'length': 16, 'seed': 21}, 'test': {'num_samples': 32, 'length': 64, 'seed': 31}}
+I0410 11:09:22.880799 139992167606144 xla_bridge.py:253] Unable to initialize backend 'tpu_driver': NOT_FOUND: Unable to find driver in registry given worker:
+manual >>  True
+I0410 11:09:23.064946 139992167606144 xla_bridge.py:253] Unable to initialize backend 'tpu': INVALID_ARGUMENT: TpuPlatform is not available.
+2022-04-10 11:09:28.233527: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/gemm_algorithm_picker.cc:212] Failed to find best cuBLAS algorithm, GEMM performance might be suboptimal: INTERNAL: All algorithms tried for %cublas-gemm.1 = f32[640,32]{1,0} custom-call(f32[640,4]{1,0} %bitcast, f32[4,32]{1,0} %Arg_1.2), custom_call_target="__cublas$gemm", backend_config="{\"alpha_real\":1,\"alpha_imag\":0,\"beta\":0,\"dot_dimension_numbers\":{\"lhs_contracting_dimensions\":[\"1\"],\"rhs_contracting_dimensions\":[\"0\"],\"lhs_batch_dimensions\":[],\"rhs_batch_dimensions\":[]},\"batch_size\":\"1\",\"lhs_stride\":\"2560\",\"rhs_stride\":\"128\"}" failed. Falling back to default algorithm.  Per-algorithm errors:
+2022-04-10 11:09:29.504176: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/gemm_algorithm_picker.cc:212] Failed to find best cuBLAS algorithm, GEMM performance might be suboptimal: INTERNAL: All algorithms tried for %cublas-gemm.1 = f32[640,32]{1,0} custom-call(f32[640,64]{1,0} %bitcast, f32[64,32]{1,0} %Arg_1.2), custom_call_target="__cublas$gemm", backend_config="{\"alpha_real\":1,\"alpha_imag\":0,\"beta\":0,\"dot_dimension_numbers\":{\"lhs_contracting_dimensions\":[\"1\"],\"rhs_contracting_dimensions\":[\"0\"],\"lhs_batch_dimensions\":[],\"rhs_batch_dimensions\":[]},\"batch_size\":\"1\",\"lhs_stride\":\"40960\",\"rhs_stride\":\"2048\"}" failed. Falling back to default algorithm.  Per-algorithm errors:
+adj shape >>  (32, 20, 20)
+2022-04-10 11:09:30.514744: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/gemm_algorithm_picker.cc:212] Failed to find best cuBLAS algorithm, GEMM performance might be suboptimal: INTERNAL: All algorithms tried for %cublas-gemm.1 = f32[640,32]{1,0} custom-call(f32[640,32]{1,0} %bitcast, f32[32,32]{1,0} %Arg_1.2), custom_call_target="__cublas$gemm", backend_config="{\"alpha_real\":1,\"alpha_imag\":0,\"beta\":0,\"dot_dimension_numbers\":{\"lhs_contracting_dimensions\":[\"1\"],\"rhs_contracting_dimensions\":[\"0\"],\"lhs_batch_dimensions\":[],\"rhs_batch_dimensions\":[]},\"batch_size\":\"1\",\"lhs_stride\":\"20480\",\"rhs_stride\":\"1024\"}" failed. Falling back to default algorithm.  Per-algorithm errors:
+2022-04-10 11:09:30.756287: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/gemm_algorithm_picker.cc:212] Failed to find best cuBLAS algorithm, GEMM performance might be suboptimal: INTERNAL: All algorithms tried for %cublas-gemm.1 = f32[640,64]{1,0} custom-call(f32[640,32]{1,0} %bitcast, f32[32,64]{1,0} %Arg_1.2), custom_call_target="__cublas$gemm", backend_config="{\"alpha_real\":1,\"alpha_imag\":0,\"beta\":0,\"dot_dimension_numbers\":{\"lhs_contracting_dimensions\":[\"1\"],\"rhs_contracting_dimensions\":[\"0\"],\"lhs_batch_dimensions\":[],\"rhs_batch_dimensions\":[]},\"batch_size\":\"1\",\"lhs_stride\":\"20480\",\"rhs_stride\":\"2048\"}" failed. Falling back to default algorithm.  Per-algorithm errors:
+2022-04-10 11:09:31.241683: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/gemm_algorithm_picker.cc:212] Failed to find best cuBLAS algorithm, GEMM performance might be suboptimal: INTERNAL: All algorithms tried for %cublas-gemm.1 = f32[640,64]{1,0} custom-call(f32[640,64]{1,0} %bitcast, f32[64,64]{1,0} %Arg_1.2), custom_call_target="__cublas$gemm", backend_config="{\"alpha_real\":1,\"alpha_imag\":0,\"beta\":0,\"dot_dimension_numbers\":{\"lhs_contracting_dimensions\":[\"1\"],\"rhs_contracting_dimensions\":[\"0\"],\"lhs_batch_dimensions\":[],\"rhs_batch_dimensions\":[]},\"batch_size\":\"1\",\"lhs_stride\":\"40960\",\"rhs_stride\":\"4096\"}" failed. Falling back to default algorithm.  Per-algorithm errors:
+manual >>  True
+adj shape >>  (32, 20, 20)
+manual >>  True
+adj shape >>  (32, 20, 20)
+2022-04-10 11:09:35.190766: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/gemm_algorithm_picker.cc:212] Failed to find best cuBLAS algorithm, GEMM performance might be suboptimal: INTERNAL: All algorithms tried for %cublas-gemm.3 = f32[640,96]{1,0} custom-call(f32[640,64]{1,0} %bitcast.19, f32[64,96]{1,0} %concatenate.2), custom_call_target="__cublas$gemm", backend_config="{\"alpha_real\":1,\"alpha_imag\":0,\"beta\":0,\"dot_dimension_numbers\":{\"lhs_contracting_dimensions\":[\"1\"],\"rhs_contracting_dimensions\":[\"0\"],\"lhs_batch_dimensions\":[],\"rhs_batch_dimensions\":[]},\"batch_size\":\"1\",\"lhs_stride\":\"40960\",\"rhs_stride\":\"6144\"}" failed. Falling back to default algorithm.  Per-algorithm errors:
+manual >>  True
+adj shape >>  (32, 20, 20)
+manual >>  True
+adj shape >>  (32, 20, 20)
+2022-04-10 11:09:39.709222: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/gemm_algorithm_picker.cc:212] Failed to find best cuBLAS algorithm, GEMM performance might be suboptimal: INTERNAL: All algorithms tried for %cublas-gemm.11 = f32[1280,32]{1,0} custom-call(f32[1280,4]{1,0} %concatenate.2, f32[4,32]{1,0} %Arg_25.26), custom_call_target="__cublas$gemm", backend_config="{\"alpha_real\":1,\"alpha_imag\":0,\"beta\":0,\"dot_dimension_numbers\":{\"lhs_contracting_dimensions\":[\"1\"],\"rhs_contracting_dimensions\":[\"0\"],\"lhs_batch_dimensions\":[],\"rhs_batch_dimensions\":[]},\"batch_size\":\"1\",\"lhs_stride\":\"5120\",\"rhs_stride\":\"128\"}" failed. Falling back to default algorithm.  Per-algorithm errors:
+2022-04-10 11:09:49.235528: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/gemm_algorithm_picker.cc:212] Failed to find best cuBLAS algorithm, GEMM performance might be suboptimal: INTERNAL: All algorithms tried for %cublas-gemm.1 = f32[640,128]{1,0} custom-call(f32[640,32]{1,0} %bitcast.123, f32[128,32]{1,0} %concatenate), custom_call_target="__cublas$gemm", backend_config="{\"alpha_real\":1,\"alpha_imag\":0,\"beta\":0,\"dot_dimension_numbers\":{\"lhs_contracting_dimensions\":[\"1\"],\"rhs_contracting_dimensions\":[\"1\"],\"lhs_batch_dimensions\":[],\"rhs_batch_dimensions\":[]},\"batch_size\":\"1\",\"lhs_stride\":\"20480\",\"rhs_stride\":\"4096\"}" failed. Falling back to default algorithm.  Per-algorithm errors:
+2022-04-10 11:09:49.236229: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/gemm_algorithm_picker.cc:212] Failed to find best cuBLAS algorithm, GEMM performance might be suboptimal: INTERNAL: All algorithms tried for %cublas-gemm.3 = f32[640,64]{1,0} custom-call(f32[640,64]{1,0} %bitcast.125, f32[64,64]{1,0} %get-tuple-element.1084), custom_call_target="__cublas$gemm", backend_config="{\"alpha_real\":1,\"alpha_imag\":0,\"beta\":0,\"dot_dimension_numbers\":{\"lhs_contracting_dimensions\":[\"1\"],\"rhs_contracting_dimensions\":[\"1\"],\"lhs_batch_dimensions\":[],\"rhs_batch_dimensions\":[]},\"batch_size\":\"1\",\"lhs_stride\":\"40960\",\"rhs_stride\":\"4096\"}" failed. Falling back to default algorithm.  Per-algorithm errors:
+2022-04-10 11:09:49.237014: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/gemm_algorithm_picker.cc:212] Failed to find best cuBLAS algorithm, GEMM performance might be suboptimal: INTERNAL: All algorithms tried for %cublas-gemm.5 = f32[640,32]{1,0} custom-call(f32[640,64]{1,0} %bitcast.127, f32[32,64]{1,0} %get-tuple-element.1085), custom_call_target="__cublas$gemm", backend_config="{\"alpha_real\":1,\"alpha_imag\":0,\"beta\":0,\"dot_dimension_numbers\":{\"lhs_contracting_dimensions\":[\"1\"],\"rhs_contracting_dimensions\":[\"1\"],\"lhs_batch_dimensions\":[],\"rhs_batch_dimensions\":[]},\"batch_size\":\"1\",\"lhs_stride\":\"40960\",\"rhs_stride\":\"2048\"}" failed. Falling back to default algorithm.  Per-algorithm errors:
+manual >>  True
+2022-04-10 11:09:49.237661: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/gemm_algorithm_picker.cc:212] Failed to find best cuBLAS algorithm, GEMM performance might be suboptimal: INTERNAL: All algorithms tried for %cublas-gemm.7 = f32[640,32]{1,0} custom-call(f32[640,32]{1,0} %bitcast.129, f32[32,32]{1,0} %get-tuple-element.1086), custom_call_target="__cublas$gemm", backend_config="{\"alpha_real\":1,\"alpha_imag\":0,\"beta\":0,\"dot_dimension_numbers\":{\"lhs_contracting_dimensions\":[\"1\"],\"rhs_contracting_dimensions\":[\"1\"],\"lhs_batch_dimensions\":[],\"rhs_batch_dimensions\":[]},\"batch_size\":\"1\",\"lhs_stride\":\"20480\",\"rhs_stride\":\"1024\"}" failed. Falling back to default algorithm.  Per-algorithm errors:
+2022-04-10 11:09:49.238390: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/gemm_algorithm_picker.cc:212] Failed to find best cuBLAS algorithm, GEMM performance might be suboptimal: INTERNAL: All algorithms tried for %cublas-gemm.9 = f32[640,64]{1,0} custom-call(f32[640,32]{1,0} %bitcast.135, f32[64,32]{1,0} %get-tuple-element.1088), custom_call_target="__cublas$gemm", backend_config="{\"alpha_real\":1,\"alpha_imag\":0,\"beta\":0,\"dot_dimension_numbers\":{\"lhs_contracting_dimensions\":[\"1\"],\"rhs_contracting_dimensions\":[\"1\"],\"lhs_batch_dimensions\":[],\"rhs_batch_dimensions\":[]},\"batch_size\":\"1\",\"lhs_stride\":\"20480\",\"rhs_stride\":\"2048\"}" failed. Falling back to default algorithm.  Per-algorithm errors:
+2022-04-10 11:09:49.239197: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/gemm_algorithm_picker.cc:212] Failed to find best cuBLAS algorithm, GEMM performance might be suboptimal: INTERNAL: All algorithms tried for %cublas-gemm.15 = f32[4,32]{1,0} custom-call(f32[640,4]{1,0} %bitcast.145, f32[32,640]{0,1} %bitcast.140, f32[4,32]{1,0} %get-tuple-element.978), custom_call_target="__cublas$gemm", metadata={op_name="jit(transpose(jvp(apply_fn)))/jit(main)/body/add_any" source_file="/usr/local/lib/python3.7/dist-packages/haiku/_src/stateful.py" source_line=529}, backend_config="{\"alpha_real\":1,\"alpha_imag\":0,\"beta\":1,\"dot_dimension_numbers\":{\"lhs_contracting_dimensions\":[\"0\"],\"rhs_contracting_dimensions\":[\"1\"],\"lhs_batch_dimensions\":[],\"rhs_batch_dimensions\":[]},\"batch_size\":\"1\",\"lhs_stride\":\"2560\",\"rhs_stride\":\"20480\"}" failed. Falling back to default algorithm.  Per-algorithm errors:
+2022-04-10 11:09:49.239857: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/gemm_algorithm_picker.cc:212] Failed to find best cuBLAS algorithm, GEMM performance might be suboptimal: INTERNAL: All algorithms tried for %cublas-gemm.17 = f32[64,96]{1,0} custom-call(f32[640,64]{1,0} %bitcast.164, f32[96,640]{0,1} %concatenate.2), custom_call_target="__cublas$gemm", backend_config="{\"alpha_real\":1,\"alpha_imag\":0,\"beta\":0,\"dot_dimension_numbers\":{\"lhs_contracting_dimensions\":[\"0\"],\"rhs_contracting_dimensions\":[\"1\"],\"lhs_batch_dimensions\":[],\"rhs_batch_dimensions\":[]},\"batch_size\":\"1\",\"lhs_stride\":\"40960\",\"rhs_stride\":\"61440\"}" failed. Falling back to default algorithm.  Per-algorithm errors:
+2022-04-10 11:09:49.240664: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/gemm_algorithm_picker.cc:212] Failed to find best cuBLAS algorithm, GEMM performance might be suboptimal: INTERNAL: All algorithms tried for %cublas-gemm.21 = f32[32,32]{1,0} custom-call(f32[640,32]{1,0} %bitcast.168, f32[32,640]{0,1} %bitcast.169, f32[32,32]{1,0} %get-tuple-element.998), custom_call_target="__cublas$gemm", metadata={op_name="jit(transpose(jvp(apply_fn)))/jit(main)/body/add_any" source_file="/usr/local/lib/python3.7/dist-packages/haiku/_src/stateful.py" source_line=529}, backend_config="{\"alpha_real\":1,\"alpha_imag\":0,\"beta\":1,\"dot_dimension_numbers\":{\"lhs_contracting_dimensions\":[\"0\"],\"rhs_contracting_dimensions\":[\"1\"],\"lhs_batch_dimensions\":[],\"rhs_batch_dimensions\":[]},\"batch_size\":\"1\",\"lhs_stride\":\"20480\",\"rhs_stride\":\"20480\"}" failed. Falling back to default algorithm.  Per-algorithm errors:
+2022-04-10 11:09:49.241454: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/gemm_algorithm_picker.cc:212] Failed to find best cuBLAS algorithm, GEMM performance might be suboptimal: INTERNAL: All algorithms tried for %cublas-gemm.25 = f32[32,64]{1,0} custom-call(f32[640,32]{1,0} %bitcast.170, f32[64,640]{0,1} %bitcast.171, f32[32,64]{1,0} %get-tuple-element.1000), custom_call_target="__cublas$gemm", metadata={op_name="jit(transpose(jvp(apply_fn)))/jit(main)/body/add_any" source_file="/usr/local/lib/python3.7/dist-packages/haiku/_src/stateful.py" source_line=529}, backend_config="{\"alpha_real\":1,\"alpha_imag\":0,\"beta\":1,\"dot_dimension_numbers\":{\"lhs_contracting_dimensions\":[\"0\"],\"rhs_contracting_dimensions\":[\"1\"],\"lhs_batch_dimensions\":[],\"rhs_batch_dimensions\":[]},\"batch_size\":\"1\",\"lhs_stride\":\"20480\",\"rhs_stride\":\"40960\"}" failed. Falling back to default algorithm.  Per-algorithm errors:
+2022-04-10 11:09:49.242379: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/gemm_algorithm_picker.cc:212] Failed to find best cuBLAS algorithm, GEMM performance might be suboptimal: INTERNAL: All algorithms tried for %cublas-gemm.29 = f32[64,64]{1,0} custom-call(f32[640,64]{1,0} %bitcast.172, f32[64,640]{0,1} %bitcast.173, f32[64,64]{1,0} %get-tuple-element.1002), custom_call_target="__cublas$gemm", metadata={op_name="jit(transpose(jvp(apply_fn)))/jit(main)/body/add_any" source_file="/usr/local/lib/python3.7/dist-packages/haiku/_src/stateful.py" source_line=529}, backend_config="{\"alpha_real\":1,\"alpha_imag\":0,\"beta\":1,\"dot_dimension_numbers\":{\"lhs_contracting_dimensions\":[\"0\"],\"rhs_contracting_dimensions\":[\"1\"],\"lhs_batch_dimensions\":[],\"rhs_batch_dimensions\":[]},\"batch_size\":\"1\",\"lhs_stride\":\"40960\",\"rhs_stride\":\"40960\"}" failed. Falling back to default algorithm.  Per-algorithm errors:
+2022-04-10 11:09:49.243232: W external/org_tensorflow/tensorflow/compiler/xla/service/gpu/gemm_algorithm_picker.cc:212] Failed to find best cuBLAS algorithm, GEMM performance might be suboptimal: INTERNAL: All algorithms tried for %cublas-gemm.33 = f32[64,32]{1,0} custom-call(f32[640,64]{1,0} %bitcast.174, f32[32,640]{0,1} %bitcast.167, f32[64,32]{1,0} %get-tuple-element.1004), custom_call_target="__cublas$gemm", metadata={op_name="jit(transpose(jvp(apply_fn)))/jit(main)/body/add_any" source_file="/usr/local/lib/python3.7/dist-packages/haiku/_src/stateful.py" source_line=529}, backend_config="{\"alpha_real\":1,\"alpha_imag\":0,\"beta\":1,\"dot_dimension_numbers\":{\"lhs_contracting_dimensions\":[\"0\"],\"rhs_contracting_dimensions\":[\"1\"],\"lhs_batch_dimensions\":[],\"rhs_batch_dimensions\":[]},\"batch_size\":\"1\",\"lhs_stride\":\"40960\",\"rhs_stride\":\"20480\"}" failed. Falling back to default algorithm.  Per-algorithm errors:
+I0410 11:09:57.092539 139992167606144 run.py:261] Compiled feedback step in 34.242287 s.
+adj shape >>  (32, 20, 20)
+manual >>  True
+adj shape >>  (32, 20, 20)
+manual >>  True
+adj shape >>  (32, 20, 20)
+manual >>  True
+I0410 11:10:00.930828 139992167606144 run.py:276] (train) step 0: {'average_accuracy': 0.5541777411722264, 'average_shift': 4.4375}
+adj shape >>  (32, 20, 20)
+I0410 11:10:04.021391 139992167606144 run.py:283] (val) step 0: {'average_accuracy': 0.483364768911644, 'average_shift': 4.65625}
+I0410 11:10:04.021617 139992167606144 run.py:329] Saving new checkpoint for average accuracy...
+I0410 11:10:04.047924 139992167606144 run.py:334] Saving new checkpoint for average shift...
+I0410 11:10:28.086042 139992167606144 run.py:276] (train) step 10: {'average_accuracy': 0.5346065699006874, 'average_shift': 3.78125}
+I0410 11:10:28.103786 139992167606144 run.py:283] (val) step 10: {'average_accuracy': 0.5459260357697858, 'average_shift': 3.3125}
+I0410 11:10:28.103949 139992167606144 run.py:329] Saving new checkpoint for average accuracy...
+I0410 11:10:28.126195 139992167606144 run.py:334] Saving new checkpoint for average shift...
+I0410 11:10:52.199741 139992167606144 run.py:276] (train) step 20: {'average_accuracy': 0.6271349284906272, 'average_shift': 2.84375}
+I0410 11:10:52.224222 139992167606144 run.py:283] (val) step 20: {'average_accuracy': 0.523001260891886, 'average_shift': 3.34375}
+I0410 11:10:52.225142 139992167606144 run.py:329] Saving new checkpoint for average accuracy...
+I0410 11:11:16.691967 139992167606144 run.py:276] (train) step 30: {'average_accuracy': 0.517299336692719, 'average_shift': 3.0}
+I0410 11:11:16.711374 139992167606144 run.py:283] (val) step 30: {'average_accuracy': 0.5457947434509935, 'average_shift': 2.78125}
+I0410 11:11:16.711764 139992167606144 run.py:329] Saving new checkpoint for average accuracy...
+I0410 11:11:16.733586 139992167606144 run.py:334] Saving new checkpoint for average shift...
+I0410 11:11:40.922346 139992167606144 run.py:276] (train) step 40: {'average_accuracy': 0.5276907605262384, 'average_shift': 5.46875}
+I0410 11:11:40.939458 139992167606144 run.py:283] (val) step 40: {'average_accuracy': 0.5962212700493951, 'average_shift': 4.28125}
+I0410 11:11:40.939608 139992167606144 run.py:329] Saving new checkpoint for average accuracy...
+I0410 11:12:05.350993 139992167606144 run.py:276] (train) step 50: {'average_accuracy': 0.6494307801063316, 'average_shift': 3.90625}
+I0410 11:12:05.368256 139992167606144 run.py:283] (val) step 50: {'average_accuracy': 0.617027893981019, 'average_shift': 4.375}
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/content/drive/MyDrive/Final Project/new_clrs/clrs/examples/run.py", line 411, in <module>
+    app.run(main)
+  File "/usr/local/lib/python3.7/dist-packages/absl/app.py", line 312, in run
+    _run_main(main, args)
+  File "/usr/local/lib/python3.7/dist-packages/absl/app.py", line 258, in _run_main
+    sys.exit(main(argv))
+  File "/content/drive/MyDrive/Final Project/new_clrs/clrs/examples/run.py", line 258, in main
+    cur_loss = model.feedback(feedback)
+  File "/content/drive/MyDrive/Final Project/new_clrs/clrs/_src/baselines_2.py", line 970, in feedback
+    feedback)
+  File "/content/drive/MyDrive/Final Project/new_clrs/clrs/_src/baselines_2.py", line 1141, in update
+    lss, grads = jax.value_and_grad(loss)(params, feedback)
+  File "/usr/local/lib/python3.7/dist-packages/jax/_src/traceback_util.py", line 162, in reraise_with_filtered_traceback
+    return fun(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/jax/_src/api.py", line 952, in value_and_grad_f
+    ans, vjp_py = _vjp(f_partial, *dyn_args, reduce_axes=reduce_axes)
+  File "/usr/local/lib/python3.7/dist-packages/jax/_src/api.py", line 2409, in _vjp
+    flat_fun, primals_flat, reduce_axes=reduce_axes)
+  File "/usr/local/lib/python3.7/dist-packages/jax/interpreters/ad.py", line 119, in vjp
+    out_primals, pvals, jaxpr, consts = linearize(traceable, *primals)
+  File "/usr/local/lib/python3.7/dist-packages/jax/interpreters/ad.py", line 106, in linearize
+    jaxpr, out_pvals, consts = pe.trace_to_jaxpr(jvpfun_flat, in_pvals)
+  File "/usr/local/lib/python3.7/dist-packages/jax/_src/profiler.py", line 206, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/jax/interpreters/partial_eval.py", line 592, in trace_to_jaxpr
+    jaxpr, (out_pvals, consts, env) = fun.call_wrapped(pvals)
+  File "/usr/local/lib/python3.7/dist-packages/jax/linear_util.py", line 166, in call_wrapped
+    ans = self.f(*args, **dict(self.params, **kwargs))
+  File "/content/drive/MyDrive/Final Project/new_clrs/clrs/_src/baselines_2.py", line 1061, in loss
+    jnp.log1p(jnp.exp(-jnp.abs(pred))) * is_not_done)
+  File "/usr/local/lib/python3.7/dist-packages/jax/_src/traceback_util.py", line 162, in reraise_with_filtered_traceback
+    return fun(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/jax/_src/api.py", line 435, in cache_miss
+    donated_invars=donated_invars, inline=inline)
+  File "/usr/local/lib/python3.7/dist-packages/jax/core.py", line 1709, in bind
+    return call_bind(self, fun, *args, **params)
+  File "/usr/local/lib/python3.7/dist-packages/jax/core.py", line 1721, in call_bind
+    outs = top_trace.process_call(primitive, fun, tracers, params)
+  File "/usr/local/lib/python3.7/dist-packages/jax/interpreters/ad.py", line 331, in process_call
+    result = call_primitive.bind(f_jvp, *primals, *nonzero_tangents, **new_params)
+  File "/usr/local/lib/python3.7/dist-packages/jax/core.py", line 1709, in bind
+    return call_bind(self, fun, *args, **params)
+  File "/usr/local/lib/python3.7/dist-packages/jax/core.py", line 1721, in call_bind
+    outs = top_trace.process_call(primitive, fun, tracers, params)
+  File "/usr/local/lib/python3.7/dist-packages/jax/interpreters/partial_eval.py", line 213, in process_call
+    const_tracers = map(self.new_instantiated_const, res)
+  File "/usr/local/lib/python3.7/dist-packages/jax/_src/util.py", line 44, in safe_map
+    return list(map(f, *args))
+  File "/usr/local/lib/python3.7/dist-packages/jax/interpreters/partial_eval.py", line 126, in new_instantiated_const
+    return JaxprTracer(self, PartialVal.unknown(get_aval(val)), ConstVar(val))
+  File "/usr/local/lib/python3.7/dist-packages/jax/core.py", line 1035, in get_aval
+    return concrete_aval(x)
+  File "/usr/local/lib/python3.7/dist-packages/jax/core.py", line 1024, in concrete_aval
+    if handler: return handler(x)
+  File "/usr/local/lib/python3.7/dist-packages/jax/_src/abstract_arrays.py", line 54, in canonical_concrete_aval
+    weak_type=weak_type)
+  File "/usr/local/lib/python3.7/dist-packages/jax/core.py", line 1284, in __init__
+    def __init__(self, dtype, val, weak_type=None):
+KeyboardInterrupt
